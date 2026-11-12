@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Animation</title>
+
+    <style>
+        /* Point #1: Keyframes */
+        @-webkit-keyframes myAnimation {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes myAnimation {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Point #2: Image positioning */
+        #f1 img {
+            position: absolute;
+        }
+
+        /* Point #3: Animation properties */
+        #f1 img {
+            -webkit-animation-name: myAnimation;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-duration: 10s;
+
+            animation-name: myAnimation;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+        }
+
+        /* Point #4: Animation delays */
+        #f1 img:nth-of-type(1) {
+            -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+        }
+
+        #f1 img:nth-of-type(2) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Point #5: Images -->
+    <div id="f1">
+        <img src="img1.png" width="100%" height="100%" alt="First image">
+        <img src="img2.png" width="100%" height="100%" alt="Second image">
+    </div>
+
+</body>
+</html>
