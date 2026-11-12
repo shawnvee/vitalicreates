@@ -1,8 +1,13 @@
 
-ul {
-    list-style-image: url("marker.png");
+ul.c1, ul.c2 {
+    width: 250px;
+    list-style-image: url('marker.png');
 }
 
-li {
-    margin: 15px 0px 0px 0px;
+ul.c1 {
+    list-style-position: outside;
+}
+
+ul.c2 {
+    list-style-position: inside;
 }
